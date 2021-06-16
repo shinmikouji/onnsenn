@@ -1,21 +1,26 @@
 .header {
     .header-fixed {
-        background-color: cl(primary);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        display: flex;
+        padding: 20px 0;
         z-index: 2;
+        background-color: cl(primary);
     }
 
     .header-logo {
         width: 150px;
         margin-left: 30px;
+    }
+
+    .heaader-nav {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .nav-btn {
@@ -24,10 +29,14 @@
         appearance: none;
         background: transparent;
         border: none;
+        border-radius: 0;
         font: inherit;
         outline: none;
-        position: relative;
+        position: absolute;
         right: 30px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
         @include overTab {
             display: none;
         }
@@ -36,9 +45,9 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                transition: transform 0.3s ease;
+                transition: transform .3s ease;
                 &:first-child {
-                    transform: rotate(45deg);
+                    transform: rotate(45deg);;
                 }
                 &:nth-child(2) {
                     transform: rotate(45deg);
@@ -49,12 +58,13 @@
             }
         }
         span {
-            position: absolute;
             width: 100%;
             height: 3px;
             background-color: cl(white);
             display: block;
-            transition: transform 0.3s ease;
+            position: absolute;
+            transition: transform .3s ease;
+            right: 0;
             &:first-child {
                 top: 0;
             }
@@ -69,60 +79,54 @@
         }
     }
 
-    .nav {
+    .nav-wrap {
+        width: 100vw;
         position: fixed;
+        height: 100vh;
         left: 0;
         top: 0;
-        width: 100%;
         background-color: #000000CC;
-        padding-top: 145px;
         z-index: 1;
+        padding-top: 140px;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease;
+        transition: opacity .3s ease;
         @include overTab {
-            // position: static;
-            width: initial;
-            background-color: transparent;
-            padding-top: 0;
-            z-index: 3;
-            left: inherit;
-            right: 0;
-            top: 38px;
             opacity: 1;
             visibility: visible;
+            width: initial;
+            height: initial;
+            background-color: transparent;
+            padding-top: 38px;
+            z-index: 3;
+            right: 40px;
+            left: inherit;
         }
         &.-active {
             opacity: 1;
             visibility: visible;
-            transition: opacity 0.3s ease;
+            transition: opacity .3s ease;
         }
-    }
-
-    .nav-wrap {
-
     }
 
     .nav-list {
         text-align: center;
-        padding-bottom: 45px;
         @include overTab {
             display: flex;
-            margin-right: 40px;
-            padding-bottom: 0;
         }
-        .item {
-            + .item {
-                margin-top: 20px;
-                @include overTab {
-                    margin-top: 0;
-                    margin-left: 20px;
-                }
+    }
+
+    .nav-item {
+        & + .nav-item {
+            margin-top: 26px;
+            @include overTab {
+                margin-top: 0;
+                margin-left: 20px;
             }
         }
         a {
-            color: cl(white);
             font-size: 24px;
+            color: cl(white);
             @include overTab {
                 font-size: 18px;
             }

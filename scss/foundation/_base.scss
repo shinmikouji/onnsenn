@@ -1,53 +1,23 @@
-// COLORS
-// @include cl(black);
-//--------------------------------------------------
-
-$colors: (
-	white: #fff,
-	black: #000,
-	text: #333333,
-    grey: #6E6E6E,
-	lightgrey: #F2F2F2,
-    red: #FF0000,
-	primary: #4D0000,
-    gold: #B8860BEA,
-	beige: #FFFFDD,
-);
-
-@function cl($key) {
-	@return map-get($colors, $key);
+/*================================================================
+base
+================================================================*/
+body {
+	color: #000000;
+	font-family: 'Hiragino Mincho Pro',serif;
+	line-height: 1.5;
+	font-size: 16px;
 }
 
-// FONT
-// @include TimesNewRoman;
-//--------------------------------------------------
-
-@mixin TimesNewRoman {
-	font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+img {
+	width: 100%;
+	height: auto;
 }
 
-// RESPONSIVE
-// @include overTab
-//--------------------------------------------------
-
-@mixin overTab {
-	@media print,screen and (min-width: 768px) {
-		@content;
-	}
+a {
+	color: #000000;
+	text-decoration: none;
 }
 
-// UTILITY
-//--------------------------------------------------
-
-._sp {
-	@include overTab {
-		display: none;
-	}
-}
-
-._pc {
-	display: none;
-	@include overTab {
-		display: block;
-	}
+main {
+	background-color: #000000;
 }

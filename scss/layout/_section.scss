@@ -1,0 +1,28 @@
+.cmn-section {
+    padding-top: 40px;
+    &.-black {
+        background-color: cl(black);
+    }
+    &.-primary {
+        background-color: cl(primary);
+    }
+}
+
+.cmn-title {
+    color: cl(white);
+    text-align: center;
+    .main {
+        font-size: 32px;
+    }
+    .sub {
+        margin-top: 20px;
+        font-size: 20px;
+        display: block;
+        text-transform: capitalize;
+        @include TimesNewRoman();
+        @include overTab {
+            margin-top: 40px;
+            margin-top: 32px;
+        }
+    }
+}

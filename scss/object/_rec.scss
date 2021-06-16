@@ -1,0 +1,32 @@
+.rec {
+  .rec-slick {
+      padding-top: 60px;
+  }
+  .rec-item {
+      display: flex!important;
+      flex-flow: column-reverse;
+      background-color: #fff;
+      border-radius: 8px;
+      margin-left: 30px;
+      margin-right: 30px;
+      @include overTab {
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+      .text {
+          padding: 24px 24px 50px 24px;
+      }
+      .title {
+          font-size: 16px;
+          color: cl(text);
+      }
+      .price {
+          font-size: 14px;
+          margin-top: 60px;
+          color: cl(text);
+          span {
+              color: cl(red);
+          }
+      }
+  }
+}

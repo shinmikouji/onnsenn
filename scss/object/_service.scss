@@ -1,0 +1,53 @@
+.service {
+    .service-wrap {
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-top: 60px;
+        @include overTab {
+            padding-top: 100px;
+            margin-left: 36px;
+            margin-right: 36px;
+        }
+    }
+    .service-list {
+        @include overTab {
+            display: flex;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .service-item {
+        background-color: cl(lightgrey);
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: flex-end;
+        padding: 10px 15px 50px;
+        @include overTab {
+            padding: 10px 24px 50px;
+            width: percentage(390 / 1280);
+        }
+        + .service-item {
+            margin-top: 30px;
+            @include overTab {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+        }
+        .title {
+            color: cl(text);
+            font-size: 28px;
+            text-align: center;
+        }
+        .desc {
+            color: cl(text);
+            padding-top: 40px;
+            font-size: 18px;
+        }
+        .image {
+            width: 160px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

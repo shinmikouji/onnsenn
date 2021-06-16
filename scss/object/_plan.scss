@@ -1,15 +1,9 @@
 .plan {
     padding-top: 80px;
-    .inner {
-
-    }
 }
 
 .rec {
     padding-top: 60px;
-    .rec-slick {
-        
-    }
     .rec-item {
         display: flex;
         flex-flow: column-reverse;
@@ -34,9 +28,6 @@
             > span {
                 color: cl(red);
             }
-        }
-        .image {
-
         }
     }
 }
